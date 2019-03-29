@@ -10,7 +10,7 @@ describe('PokeList', () => {
   })
 
   describe('Redefined', () => {
-    it('error', () => {
+    it('sums 2', () => {
       expectDoublesEqual(2, 4)
     })
   })
