@@ -1,28 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
-
-const pokedexUrl = 'https://pokeapi.co/api/v2/pokemon'
+import { StyleSheet, View } from 'react-native';
+import PokeView from './src/PokeView'
 
 export default class App extends React.Component {
-  state = {
-    pokemons: []
-  }
-
-  componentDidMount = async () => {
-    const pokemonsRequest = await fetch(pokedexUrl)
-    const pokemonsResult = await pokemonsRequest.json()
-    const pokemons = pokemonsResult.results
-    this.setState({ pokemons })
-  }
-
   render() {
     return (
       <View style={styles.container}>
-        <FlatList
-          data={this.state.pokemons}
-          keyExtractor={(item) => item.name}
-          renderItem={({item}) => <Text>{item.name}</Text>}
-        />
+        <PokeView />
       </View>
     );
   }
