@@ -1,6 +1,5 @@
-import React from 'react';
-import { Text, FlatList } from 'react-native';
-import PokeRepo from './PokeRepo'
+import React from 'react'
+import { Text, FlatList } from 'react-native'
 
 export default class PokeView extends React.Component {
   state = {
@@ -8,7 +7,7 @@ export default class PokeView extends React.Component {
   }
 
   componentDidMount = async () => {
-    const pokeRepo = new PokeRepo()
+    const pokeRepo = this.props.pokeRepo
     const pokemons = await pokeRepo.pokemons()
     this.setState({ pokemons })
   }
