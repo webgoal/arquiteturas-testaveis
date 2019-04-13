@@ -1,15 +1,12 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import PokeView from './src/PokeView'
-import PokeRepo from './src/PokeRepo'
-
-const pokeRepo = new PokeRepo()
+import PokeView from './01_two_layers/views/PokeView'
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <PokeView pokeRepo={pokeRepo} />
+        <PokeView />
       </View>
     )
   }

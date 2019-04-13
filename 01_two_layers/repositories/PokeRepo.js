@@ -1,3 +1,6 @@
+// README: NOTA01
+import fetch from 'node-fetch'
+
 const pokedexUrl = 'https://pokeapi.co/api/v2/pokemon'
 
 export default class PokeRepo {
